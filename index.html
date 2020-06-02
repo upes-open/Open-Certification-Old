@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+body {
+    font-family: 'Montserrat';font-size: 22px;
+}
+.centeredName {
+  position: absolute;
+  top: 45%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+}
+.centeredCause {
+    position: absolute;
+    top: 60%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+</head>
+<body>
+
+<div id="certificateDownload">
+  <img src="TemplateImage.png" alt="Snow">
+  <div class="centeredName">Centered</div>
+  <div class="centeredCause">Centered</div>
+</div>
+<hr width="100%">
+<div class="container">
+    <button onclick="print()">Download Certificate</button>
+</div>
+<hr width="100%">
+<script src='dist/jspdf.min.js'></script>
+<script>
+
+    function print() {
+      const filename  = 'ThisIsYourPDFFilename.pdf';
+  
+      html2canvas(document.querySelector('#certificateDownload')).then(canvas => {
+        let pdf = new jsPDF('p', 'mm', 'a4');
+        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+        pdf.save(filename);
+      });
+    }
+  
+  // Variant
+  // This one lets you improve the PDF sharpness by scaling up the HTML node tree to render as an image before getting pasted on the PDF.
+  function print(quality = 1) {
+      const filename  = 'ThisIsYourPDFFilename.pdf';
+  
+      html2canvas(document.querySelector('#certificateDownload'), 
+                  {scale: quality}
+               ).then(canvas => {
+        let pdf = new jsPDF('p', 'mm', 'a4');
+        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+        pdf.save(filename);
+      });
+    }
+</script>
+</body>
+</html>

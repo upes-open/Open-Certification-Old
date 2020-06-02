@@ -1,0 +1,20 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+  }
+  body {
+      font-family: 'Montserrat';font-size: 22px;
+  }
+  .centeredName {
+    position: absolute;
+    top: 45%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+  }
+  .centeredCause {
+      position: absolute;
+      top: 60%;
+      left: 22%;
+      transform: translate(-50%, -50%);
+}

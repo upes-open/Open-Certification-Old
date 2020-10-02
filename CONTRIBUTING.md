@@ -27,9 +27,9 @@ GitHub repository URLs will reference both the username associated with the owne
 
 https://github.com/upes-open/Open-Certification
 
-![screenshot-star](https://github.com/upes-open/Open-Certification/blob/master/star.jpg)
+![screenshot-star](star.jpg)
 
-![screenshot-fork](https://github.com/upes-open/Open-Certification/blob/master/fork.jpg)
+![screenshot-fork](fork.jpg)
 
 When you’re on the main page of a repository, you’ll see a button to "Star" and “Fork” the repository on the upper right-hand side of the page, underneath your user icon.
 
@@ -45,7 +45,7 @@ https://github.com/[YOUR-USERNAME]/Open-Certification.git
 
 You can alternatively copy the URL by using the green “Clone or download” button from your repository page that you just forked from the original repository page. Once you click the button, you’ll be able to copy the URL by clicking the binder button next to the URL:
 
-![screenshot-clone](https://github.com/upes-open/Open-Certification/blob/master/github-open-certification.jpg)
+![screenshot-clone](github-open-certification.jpg)
 
 Once we have the URL, we’re ready to clone the repository. To do this, we’ll combine the git clone command with the repository URL from the command line in a terminal window:
 
